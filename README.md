@@ -74,7 +74,6 @@ Example to run in a Colab notebook cell:
 !python sentence_embedding_model.py
 
 
----
 ## Code Structure
 
 - **SentenceEmbeddingModel class**: Core class for preprocessing, Word2Vec training, embedding generation, and contrastive learning.
