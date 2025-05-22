@@ -57,6 +57,8 @@ Download NLTK data (optional if running the script which downloads automatically
 import nltk
 nltk.download('punkt')
 
+---
+
 ## Usage
 
 Run the main script in a Google Colab environment (recommended for easy dataset upload):
@@ -71,6 +73,7 @@ Example to run in a Colab notebook cell:
 ```bash
 !python sentence_embedding_model.py
 
+---
 ## Code Structure
 
 - **SentenceEmbeddingModel class**: Core class for preprocessing, Word2Vec training, embedding generation, and contrastive learning.
@@ -97,4 +100,3 @@ You can customize these when initializing the model.
 - Input: Plain text file, one sentence per line.
 - For classification evaluation, labels should be provided or generated accordingly.
 - Larger datasets improve Word2Vec training quality and downstream performance.
-
