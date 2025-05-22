@@ -49,7 +49,7 @@ It is designed for easy use with text datasets uploaded via Google Colab or loca
    cd sentence-embedding-ngram-word2vec
 
 Install required Python packages:
-
+'''bash
 pip install nltk gensim scikit-learn tqdm google-colab
 
 Download NLTK data (optional if running the script which downloads automatically):
@@ -57,21 +57,18 @@ Download NLTK data (optional if running the script which downloads automatically
 import nltk
 nltk.download('punkt')
 
-Usage
+#Usage
 Run the main script in a Google Colab environment (recommended for easy dataset upload):
 
-Upload your dataset file (text file with one sentence per line).
+-Upload your dataset file (text file with one sentence per line).
 
-The script will tokenize the sentences, generate n-grams, and train a Word2Vec model.
+-The script will tokenize the sentences, generate n-grams, and train a Word2Vec model.
 
-Perform unsupervised contrastive learning to fine-tune embeddings.
+-Perform unsupervised contrastive learning to fine-tune embeddings.
 
-Evaluate embeddings on a downstream text classification task (using example labels or your own).
+-Evaluate embeddings on a downstream text classification task (using example labels or your own).
 
-Example to run in a Colab notebook cell:
-!python sentence_embedding_model.py
-
-Code Structure
+#Code Structure
 
 SentenceEmbeddingModel class: Core class for preprocessing, Word2Vec training, embedding generation, and contrastive learning.
 
