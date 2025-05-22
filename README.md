@@ -49,13 +49,14 @@ It is designed for easy use with text datasets uploaded via Google Colab or loca
    cd sentence-embedding-ngram-word2vec
 
 Install required Python packages:
-'''bash
+```bash
 pip install nltk gensim scikit-learn tqdm google-colab
 
-Download NLTK data (optional if running the script which downloads automatically):
-
-import nltk
-nltk.download('punkt')
+   Download NLTK data (optional if running the script which downloads 
+   automatically):
+  ```bash
+  import nltk
+   nltk.download('punkt')
 
 ---
 
@@ -63,40 +64,74 @@ nltk.download('punkt')
 
 Run the main script in a Google Colab environment (recommended for easy dataset upload):
 
-- Upload your dataset file (text file with one sentence per line).
-- The script will tokenize the sentences, generate n-grams, and train a Word2Vec model.
-- Perform unsupervised contrastive learning to fine-tune embeddings.
-- Evaluate embeddings on a downstream text classification task (using example labels or your own).
+1. Upload your dataset file (text file with one sentence per line)
+2. The script will:
+   - Tokenize the sentences
+   - Generate n-grams
+   - Train a Word2Vec model
+   - Perform unsupervised contrastive learning to fine-tune embeddings
+   - Evaluate embeddings on a downstream text classification task (using example labels or your own)
 
 Example to run in a Colab notebook cell:
-
 ```bash
 !python sentence_embedding_model.py
 
+---
 
 ## Code Structure
 
-- **SentenceEmbeddingModel class**: Core class for preprocessing, Word2Vec training, embedding generation, and contrastive learning.
-- **load_dataset_from_upload()**: Utility for uploading datasets in Colab.
-- **Main script block**: Demonstrates complete workflow from dataset loading, model training, contrastive learning, to evaluation.
+### SentenceEmbeddingModel class
+Core class for:
+- Preprocessing
+- Word2Vec training
+- Embedding generation
+- Contrastive learning
+
+### load_dataset_from_upload()
+Utility function for:
+- Uploading datasets in Colab
+
+### Main script block
+Demonstrates complete workflow:
+1. Dataset loading
+2. Model training
+3. Contrastive learning
+4. Evaluation
 
 ## Parameters
 
-- `ngram_range`: Tuple defining the range of n-grams (default `(1, 5)`).
-- `vector_size`: Dimensionality of Word2Vec embeddings (default `100`).
-- `alpha`: Word2Vec training learning rate (default `0.025`).
-- `epochs`: Number of contrastive learning epochs (default `20`).
-- `margin`: Margin parameter for contrastive loss (default `0.1`).
+| Parameter       | Description                                | Default Value |
+|-----------------|--------------------------------------------|---------------|
+| `ngram_range`   | Tuple defining the range of n-grams        | `(1, 5)`      |
+| `vector_size`   | Dimensionality of Word2Vec embeddings      | `100`         |
+| `alpha`         | Word2Vec training learning rate           | `0.025`       |
+| `epochs`        | Number of contrastive learning epochs      | `20`          |
+| `margin`        | Margin parameter for contrastive loss      | `0.1`         |
 
-You can customize these when initializing the model.
+*You can customize these when initializing the model.*
 
 ## Evaluation
 
-- **Intrinsic**: Cosine similarity of sentence embeddings to assess semantic similarity.
-- **Extrinsic**: Logistic Regression classification task on sentence embeddings to test practical utility.
+### Intrinsic Evaluation
+- Measures: Cosine similarity between sentence embeddings
+- Purpose: Assess semantic similarity
 
-## Dataset
+### Extrinsic Evaluation
+- Method: Logistic Regression classification
+- Purpose: Test practical utility of embeddings
 
-- Input: Plain text file, one sentence per line.
-- For classification evaluation, labels should be provided or generated accordingly.
-- Larger datasets improve Word2Vec training quality and downstream performance.
+## Dataset Requirements
+
+### Input Format
+- Plain text file
+- One sentence per line
+
+### For Classification Evaluation
+- Labels should be:
+  - Provided, or
+  - Generated automatically
+
+### Recommendations
+- Dataset size considerations:
+  - Larger datasets → Better Word2Vec training quality
+  - Larger datasets → Improved downstream performance
