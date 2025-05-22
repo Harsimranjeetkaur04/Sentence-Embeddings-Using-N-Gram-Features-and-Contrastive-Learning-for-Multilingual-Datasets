@@ -73,6 +73,7 @@ Example to run in a Colab notebook cell:
 ```bash
 !python sentence_embedding_model.py
 
+
 ---
 ## Code Structure
 
