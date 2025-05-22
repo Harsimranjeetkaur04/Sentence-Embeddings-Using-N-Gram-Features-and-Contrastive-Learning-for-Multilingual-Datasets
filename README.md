@@ -67,9 +67,6 @@ Run the main script in a Google Colab environment (recommended for easy dataset 
    - Perform unsupervised contrastive learning to fine-tune embeddings
    - Evaluate embeddings on a downstream text classification task (using example labels or your own)
 
-Example to run in a Colab notebook cell:
-```bash
-!python sentence_embedding_model.py
 
 ---
 
