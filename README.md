@@ -49,14 +49,9 @@ It is designed for easy use with text datasets uploaded via Google Colab or loca
    cd sentence-embedding-ngram-word2vec
 
 Install required Python packages:
-```bash
-pip install nltk gensim scikit-learn tqdm google-colab
 
    Download NLTK data (optional if running the script which downloads 
-   automatically):
-  ```bash
-  import nltk
-   nltk.download('punkt')
+   automatically)
 
 ---
 
