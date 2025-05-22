@@ -13,9 +13,7 @@ This project implements a custom sentence embedding model that generates sentenc
 - [Code Structure](#code-structure)  
 - [Parameters](#parameters)  
 - [Evaluation](#evaluation)  
-- [Dataset](#dataset)  
-- [License](#license)  
-- [Contact](#contact)  
+- [Dataset](#dataset) 
 
 ---
 
